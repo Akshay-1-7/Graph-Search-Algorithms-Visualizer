@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graph Search Algorithms Visualizer</title>
+	<link rel = "stylesheet" href = "./main.css" />
+	<link rel = "icon" type = "image/x-icon" href = "logo.jpg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<div id = "heading">
+		<h1>Graph Search Algorithms Visualizer</h1>
+	</div>
+	<div class = "page">
+		<div id = "left_panel">
+			<div>
+				<div id = "select_type_section"><h4>Select Mode</h4>
+					<div class="radio-buttons">
+						<div>	
+							<input type="radio" id = "wallRadio" name = "radio_type" value = "wall" checked = "checked">
+							<label for= "wallRadio"> Wall</label>	
+						</div>
+						<div>	
+							<input type="radio" id = "sourceRadio" name = "radio_type" value = "source">
+							<label for= "sourceRadio"> Source</label>	
+						</div>
+						<div>	
+							<input type="radio" id = "targetRadio" name = "radio_type" value = "target">
+							<label for= "targetRadio"> Target</label>	
+						</div>
+					</div>
+				</div>
+				<br>
+
+				<div style="padding-top: 20px;">
+					<button class = "setting_buttons" id = "make-maze" type="button">Make Maze</button>
+				</div>
+				<br>
+
+				<div id = "select_algo_section">
+					<h4>Select Algo</h4><div class="radio-buttons">
+						<div>	
+							<input type="radio" id = "bfs-Radio" name = "radio_algo" value="BFS" checked = "checked">
+							<label for= "bfs-Radio"> BFS</label>	
+						</div>
+						<div>	
+							<input type="radio" id = "dfs-Radio" name = "radio_algo" value = "DFS">
+							<label for= "dfs-Radio"> DFS</label>	
+						</div>
+						<div>	
+							<input type="radio" id = "aStar-Radio" name = "radio_algo" value = "A Star">
+							<label for= "aStar-Radio"> A Star</label>	
+						</div>
+					</div>
+				</div>
+				<br>
+				
+			</div>
+			<div id = "board-setting">
+				<h2>Board Setting</h2>
+				<form>
+					<input type = "number" id = "row_size" type = "text" placeholder = "Rows">
+					<br>
+					<input type = "number" id = "col_size" type = "text" placeholder = "Columns">
+					<br>
+					<button class = "setting_buttons" id = "apply-button" type = "button">Apply</apply>
+				</form>
+			</div>
+		 
+		</div>
+		<div id = "mid_panel">
+			<div>
+				<button class = "main_buttons" id = "clear-button" type = "submit">Clear</button>
+				<button class = "main_buttons" id = "start-button" type = "submit" style="margin-left:20px;">Start</button>
+				<button class = "main_buttons" id = "step-button" type="submit" style="margin-left:20px; display: none;">Step</button>
+				<button class = "main_buttons" id = "animation-button" type="submit" style="margin-left:20px; display: none;">Animation</button>	
+			</div>
+			<div id="board"></div>
+		</div>	
+		<div id = "right_panel">
+			<div id="data-container" >
+          		<h2>Log</h2>
+          		<div id="data-content" style="text-align: left;">
+					
+				</div>
+        	</div>
+		</div>
+	</div>
+	
+	<script type = "module" src = "./main.js" defer></script>
+</body>
+
+</html>
